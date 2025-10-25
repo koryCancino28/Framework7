@@ -7,11 +7,14 @@ import 'framework7/css/bundle';
 // Import Icons and App Custom Styles
 import '../css/icons.css';
 import '../css/app.scss';
+
 //bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
+// En tu archivo JavaScript
+// import { Tabulator } from 'tabulator-tables';
+// import 'tabulator-tables/dist/css/tabulator.min.css';
 // Import Routes
 import routes from './routes.js';
 // Import Store

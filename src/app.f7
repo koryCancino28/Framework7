@@ -1,12 +1,32 @@
 
 <template>
   <div id="app">
+    <div class="navbar">
+        <div class="navbar-inner">
+          <!-- <div class="title">PRUEBITAS FRAMEWORK7</div> -->
+          <div class="right">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="/" data-view=".view-main">Pase Vehicular</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/home/" data-view=".view-main">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/otra-pagina/" data-view=".view-main">Otra Página</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main view-init safe-areas" data-url="/"></div>
+    <!-- <div class="view view-main view-init safe-areas" data-url="/pase_vehicular"></div> -->
 
-  <!-- Your main view, should have "view-main" class -->
-  <div class="view view-main view-init safe-areas" data-url="/"></div>
-  <!-- <div class="view view-main view-init safe-areas" data-url="/pase_vehicular"></div> -->
-
-  </div>
+    </div>
 </template>
 <script>
   export default () => {

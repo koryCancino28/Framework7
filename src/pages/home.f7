@@ -19,10 +19,131 @@
     </div>
     <!-- Scrollable page content-->
     <div class="page-content">
-      <div class="block">
-        <p>Here is your blank Framework7 app. Let's see what we have here.</p>
-      </div>
+        <div class="block">
+          <p>Here is your blank Framework7 app. Let's see what we have here.</p>
+        </div>
+        <style>
+          /* Div a animar */
+          .animated {
+            width: 100px;
+            height: 100px;
+            background-color: #db886f;
+            border-radius: 10px;
+            animation: slide 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+          }
 
+          /* Keyframes de animación */
+          @keyframes slide {
+              from { transform: translateX(0); }
+              to { transform: translateX(100px); }
+          }
+          /* Parent Grid Container */
+        .parent-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 25px;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+
+        /* Grid Items */
+        .grid-item-14, .grid-item-15, .grid-item-16, .grid-item-17 {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-template-rows: subgrid;
+            background: #a5d7ff;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Grid item positions */
+        .grid-item-14 { grid-column: 1 / 2; grid-row: 1 / 2; }
+        .grid-item-15 { grid-column: 2 / 3; grid-row: 1 / 2; }
+        .grid-item-16 { grid-column: 1 / 2; grid-row: 2 / 3; }
+        .grid-item-17 { grid-column: 2 / 3; grid-row: 2 / 3; }
+
+        /* Children of subgrid items */
+        .grid-item-14 > *, .grid-item-15 > *, .grid-item-16 > *, .grid-item-17 > * {
+            background: #bf75ce;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Fallback for non-supporting browsers */
+        @supports not (grid-template-columns: subgrid) {
+            .grid-item-14, .grid-item-15, .grid-item-16, .grid-item-17 {
+                grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            }
+        }
+        /* .card.clipped {
+            clip-path: circle(30% at 50% 50%);
+            background: var(--color);
+            padding: 2rem;
+        } */
+        </style>
+        <div class="card clipped" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+
+        <div class="animated"></div>
+        <div class="parent-grid">
+          <div class="grid-item-14">
+              <div>14-1</div>
+              <div>14-2</div>
+          </div>
+          <div class="grid-item-15">
+              <div>15-1</div>
+              <div>15-2</div>
+          </div>
+          <div class="grid-item-16">
+              <div>16-1</div>
+              <div>16-2</div>
+          </div>
+          <div class="grid-item-17">
+              <div>17-1</div>
+              <div>17-2</div>
+          </div>
+        </div>
+        <!-- <div id="example-table"></div>
+        <script>
+          var table = new Tabulator("#example-table", {
+            data:tabledata,           //load row data from array
+            layout:"fitColumns",      //fit columns to width of table
+            responsiveLayout:"hide",  //hide columns that don't fit on the table
+            addRowPos:"top",          //when adding a new row, add it to the top of the table
+            history:true,             //allow undo and redo actions on the table
+            pagination:"local",       //paginate the data
+            paginationSize:7,         //allow 7 rows per page of data
+            paginationCounter:"rows", //display count of paginated rows in footer
+            movableColumns:true,      //allow column order to be changed
+            initialSort:[             //set the initial sort order of the data
+                {column:"name", dir:"asc"},
+            ],
+            columnDefaults:{
+                tooltip:true,         //show tool tips on cells
+            },
+            columns:[                 //define the table columns
+                {title:"Name", field:"name", editor:"input"},
+                {title:"Task Progress", field:"progress", hozAlign:"left", formatter:"progress", editor:true},
+                {title:"Gender", field:"gender", width:95, editor:"list", editorParams:{values:["male", "female"]}},
+                {title:"Rating", field:"rating", formatter:"star", hozAlign:"center", width:100, editor:true},
+                {title:"Color", field:"col", width:130, editor:"input"},
+                {title:"Date Of Birth", field:"dob", width:130, sorter:"date", hozAlign:"center"},
+                {title:"Driver", field:"car", width:90,  hozAlign:"center", formatter:"tickCross", sorter:"boolean", editor:true},
+            ],
+        });
+        </script> -->
     </div>
   </div>
 </template>

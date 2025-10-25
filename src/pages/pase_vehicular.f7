@@ -224,7 +224,7 @@
   <div class="page" data-name="pase-vehicular">
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="title">Pase Vehicular</div>
+        <div class="title" >Pase Vehicular</div>
         <div class="right">
           <a href="#" class="button button-samll button-round button-fill color-green" id="btn-nuevo">+ Nuevo</a>
         </div>
@@ -254,6 +254,7 @@
           </div>
         </div>
       </div>
+      
         <div class="data-table block block-strong block-outline inset table-container">
           <table class="text-align-center">
             <thead>

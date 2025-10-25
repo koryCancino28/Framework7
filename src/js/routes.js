@@ -7,6 +7,10 @@ var routes = [
     path: '/',
     component: pasePage,
   },
+  {
+    path: '/home/',
+    component: HomePage,
+  },
 ];
 
 export default routes;
