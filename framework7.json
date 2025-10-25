@@ -1,0 +1,19 @@
+{
+  "cwd": "C:\\Users\\Dev-08\\Desktop\\test",
+  "type": [
+    "pwa",
+    "web"
+  ],
+  "name": "crud_basico",
+  "framework": "core",
+  "template": "blank",
+  "bundler": "vite",
+  "cssPreProcessor": "scss",
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
